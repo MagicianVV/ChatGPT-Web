@@ -127,6 +127,8 @@ export function ChatList(props: { narrow?: boolean }) {
             className={styles["chat-list"]}
             ref={provided.innerRef}
             {...provided.droppableProps}
+            onMouseDown={(e) => e.preventDefault()} // 阻止默认的鼠标点击事件
+
           >
             {sessions.map((item, i) => (
               <ChatItem
