@@ -137,8 +137,7 @@ export function ChatList(props: { narrow?: boolean }) {
                 id={item.id}
                 index={i}
                 selected={i === selectedIndex}
-                // 禁止切换ChatList时，禁用onClick事件
-                onClick={true ? undefined : () => {
+                onClick={() => {
                   navigate(Path.Chat);
                   selectSession(i);
                 }}
